@@ -6,8 +6,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 
-import logo from "./logo.png";
-import searchIcon from "./search-icon.png";
+import logo from "./logo2.png";
+
 import './index.css';
 
 
@@ -25,26 +25,25 @@ export class Header extends Component {
                 <span className="navbar-text mr-3">
                     <strong>{user ? `Welcome ${user.username}` : ""}</strong>
                 </span>
-                <li className="nav-item">
-                    <button
+                <li className="nav-item4">
+                    <center><button
                         onClick={this.props.logout}
-                        className="nav-link btn btn-info btn-sm text-light"
-                    >
+                        className="nav-link btn btn-info btn-sm text-light">
                         Logout
-          </button>
+                    </button></center>
                 </li>
             </ul>
         );
 
         const guestLinks = (
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li className="nav-item">
-                    <Link to="/register" className="nav-link">
+                <li className="nav-item1">
+                    <Link to="/register" className="nav-link1">
                         Register
           </Link>
                 </li>
-                <li className="nav-item">
-                    <Link to="/login" className="nav-link">
+                <li className="nav-item2">
+                    <Link to="/login" className="nav-link1">
                         Login
           </Link>
                 </li>
@@ -52,7 +51,9 @@ export class Header extends Component {
         );
 
         return (
+           <div className="card-group82">
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
+
                 <div className="container">
                     <button
                         className="navbar-toggler"
@@ -61,43 +62,23 @@ export class Header extends Component {
                         data-target="#navbarTogglerDemo01"
                         aria-controls="navbarTogglerDemo01"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
+                        aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a className="navbar-brand" href="#">
-                            DOC ANNIE'S SUPER FOODS</a>
-                    </div>
-
 
                     <nav className="menu">
+
                         <h1 style={{
                             backgroundImage: 'url(' + logo + ')'
-                        }} className="menu__logo">Epic Co.</h1>
-
-                        <div className="menu__right">
-                            <ul className="menu__list">
-                                <li className="menu__list-item"><a className="menu__link menu__link--active" href="#">Home</a></li>
-                                <li className="menu__list-item"><a className="menu__link" href="#">About</a></li>
-                                <li className="menu__list-item"><a className="menu__link" href="#">Portfolio</a></li>
-                                <li className="menu__list-item"><a className="menu__link" href="#">Contact</a></li>
-                            </ul>
-
-                            <button style={{
-                                backgroundImage: 'url(' + searchIcon + ')'
-                            }} className="menu__search-button"></button>
-
-                            <form className="menu__search-form hide" method="POST">
-                                <input className="menu__search-input" placeholder="Type and hit enter" />
-                            </form>
-                        </div>
+                        }} className="menu__logo"></h1>
                     </nav>
-                </div>
 
+                </div>
                 {isAuthenticated ? authLinks : guestLinks}
 
             </nav>
+       </div>
+
         );
     }
 }
@@ -109,4 +90,4 @@ const mapStateToProps = state => ({
 export default connect(
     mapStateToProps,
     { logout }
-)(Header);
+)(Header)

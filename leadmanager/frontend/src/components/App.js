@@ -59,7 +59,7 @@ class App extends Component {
                             <Alerts />
                             <div className="container">
                                 <Switch>
-                                    <PrivateRoute exact path="/" component=
+                                    <Route exact path="/" component=
                                         {Dashboard} />
                                     <Route exact path="/register" component=
                                         {Register} />

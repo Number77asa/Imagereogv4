@@ -1,0 +1,168 @@
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+video{
+    background-size: contain;
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: 100%;
+    height: auto;
+    /* This forces the video up; shows ugly side*/
+   /* margin-top: 35em;*/
+   /*position absolute looks best*/
+    position: fixed;
+   /*z puts it behind all other lements*/
+    z-index: -1;
+    transform: translate(-50%,-50%);
+ 
+}
+
+
+.card-group6 [class*='col-sm-6'] {
+   
+    background-color: transparent;
+    display:inline-block;
+    position:absolute;
+    width:100%;
+    min-height:auto;
+    background-color: transparent; /*needs to be invisible*/
+    top: 7vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.card-group6 [class*='card'] {
+    width: auto;
+    display: inline-block;
+    padding: 1em;
+}
+
+.card-group6 [class*='btn'] {
+        font-size: 1vw;
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: auto;
+        /*padding is what centered it in its button*/
+        padding: 0px;
+}
+
+.card-group6 h3 
+{ 
+       font-size: 1.4vw;
+       position: absolute;
+       top:8vw; 
+       bottom: 0;
+       left: 0;
+       right: 0;
+       margin: auto;
+       color: white;
+       font-family: "Yellowtail";
+       font-size: 24px;
+       font-weight: bold;
+}
+
+.card-group6 h1{ 
+    font-size: 1.4vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+    
+
+.card-group6 h4{ 
+    font-size: 1.9vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: green;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:1px) and (max-width: 992px)  {
+    
+.card-group6 [class*='col-sm-6'] {
+    display:block;
+    position:fixed;
+    width:80%;
+    height: 50%;
+    background-color: transparent; /*needs to be invisible*/
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* affects the white space; set this to transparent if you want to be cool i guess
+.card-group6 [class*='card'] {
+    width: 75%;
+    display: inline-block;
+    padding: 1em;
+    height: 40%;
+}
+*/
+
+
+.card-group6 h3{
+    font-size: 1.4vw;
+    position: absolute;
+    top:22vw;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: "Yellowtail";
+    font-size: 24px;
+    font-weight: bold;
+}
+/* container is now parent element*/
+/*.card-group6 [class*='container'] {
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    padding: 1em; 
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    height:5vw;
+}
+*/
+
+
+.card-group6 h4{
+    font-size: 6vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: green;
+    font-weight: bold;
+}
+
+
+.card-group6 [class*='btn'] {
+        font-size: 2.5vw;
+        height: auto;
+        width: auto;
+        text-align: center;
+        margin: auto;
+        /*padding is what centered it in its button*/
+        padding: 0px;
+}
+
+
+
+
+}

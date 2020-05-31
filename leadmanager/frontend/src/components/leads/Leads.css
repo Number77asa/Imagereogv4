@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.card-group14 [class*='container'] {
+    vertical-align: none;
+    display: flex;
+    white-space:nowrap;
+    height: 100%;
+    width: 100%;
+}
+*/
+
+.card-group72 [class*='btn'] {
+        font-size: .1vw;
+        text-align: center;
+        width: auto;
+        height: auto;
+}
+
+
+
+.table{
+
+    border: 1px solid blue;
+}
+.container-fluid{
+height: 15vw;
+width: 100%;
+/*this position relative allows for the Leads.js fragement to push this component down when a lead is added!*/
+position: relative;
+
+}
+tr{
+    border: 1px solid blue;
+}
+td{
+    border: 1px solid blue;
+}
+.table-striped{
+    border: 1px solid blue; 
+
+}
+Fragment{
+    border: 1px solid blue; 
+
+}
+
+
+@media only screen and (min-width:1px) and (max-width: 992px)  {
+
+.card-group72 [class*='btn'] {
+        font-size: .5vw;
+        text-align: center;
+	width: auto;
+	height: auto;
+}
+}

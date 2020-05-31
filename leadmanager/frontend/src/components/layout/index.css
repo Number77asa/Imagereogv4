@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
+
 * {
     box-sizing: border-box;
+	
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,117 +12,180 @@ html, body {
     padding: 0;
 }
 
+
 body {
-    background-color: #e7ebf0;
-}
 
-.container {
-    width: 1000px;
-    margin: 20px auto;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-}
-
-.hide {
-    display: none;
-}
-
-.menu {
-    background-color: white;
-    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    width: 752px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
-    position: relative;
-}
-
-.menu__right {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.menu__list {
-    list-style-type: none;
-    padding: 0;
-    height: 100%;
-    margin: 0;
-    margin-right: 40px;
-}
-
-.menu__list-item {
-    display: inline-block;
-    height: 100%;
-    margin-right: 20px;
-}
-
-.menu__list-item:last-child {
-    margin-right: 0;
-}
-
-.menu__link {
-    color: #3a3e47;
-    display: inline-block;
-    height: 100%;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    padding: 0 3px;
-}
-
-.menu__link:hover {
-    color: #ffaa3b;
-}
-
-.menu__link--active {
-       color: #ffaa3b;
-    border-top: 4px solid #ffaa3b;
-    font-weight: 700;
-}
-
-.menu__logo {
-    text-indent: -9999999px;
-    display: inline-block;
-    height: 100%;
-    width: 92px;
-    background-size: cover 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-}
-
-.menu__search-button {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    border: 1px solid #c8c9ce;
     background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
+    text-align: center;
+
 }
 
-.menu__search-form {
-    position: absolute;
-    top: 100%;
+
+.navbar{
+
+display: flex;
+white-space:nowrap;
+height: 10vw;
+width: 100%;
+position: relative;
+}
+
+
+/*width auto or 100% will lay over logout links*/
+.menu__logo {
+  width: 90%;
+  height: auto;
+  top: 1vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+	
+.card-group82 [class*='btn']{
+      font-size: 1vw;
+      text-align: center;
+      width: 5vw;
+      height: 3vw;
+}
+
+.card-group12 [class*='container-fluid'] {
+  display: flex;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
+button{
+    display:block;
+    background-size: contain;
+    vertical-align: middle;
+    text-align: center;
+}
+
+strong{
+    font-size: 1.3vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
-    padding: 10px;
-    background-color: white;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.menu__search-input {
-    outline: none;
-    border: 1px solid #c8c9ce;
-    font-size: 18px;
-    padding: 5px;
-    font-weight: 300;
+/*the below & above cause the buttons to line up*/
+.text-light{
+    font-size: 1.19vw;
+    line-height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+.bg-light {
+    text-align: center;
+    vertical-align: middle;
+
+    white-space:nowrap;
+
+    background-color: transparent;
+    height:7.6vw;
+/*not sure bg-light is necsarry but*/
+/*height should == height of navbar above*/
+    /* height:7vw;   this will control size of header*/
+}
+
+
+/*top needs 5vw cause the parent is 10vw; prolly cause it's outer div not centered*/
+.nav-item1 {
+display: inline-block;
+position: absolute;
+right: 6vw;
+top: 5vw;
+font-size: 1.7vw;
+}
+
+.nav-item2 {
+display: inline-block;
+position: absolute;
+right: 1vw;
+top:5vw;
+font-size: 1.7vw;
+}
+
+
+@media only screen and (min-width:1px) and (max-width: 650px)  {
+
+html, body {
+outline: none;
+border: none;
+box-shadow: none;
+}
+body {
+background-color: transparent;
+outline: none;
+border: none;
+box-shadow: none;
+}
+
+/*need to clean up logic below*/
+
+.nav-item4{
+position: absolute;
+top:3vw;
+right:0;
+}
+
+.navbar-text{
+position: absolute;
+top:0;
+right:3vw;
+}
+
+
+
+.text-light{
+    font-size: 1.10vw;
+    top: 0;
+    line-height: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+strong{
+    font-size: 1.2vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.bg-light {
+    text-align: center;
+    vertical-align: middle;
+
+    white-space:nowrap;
+
+    background-color: transparent;
+    height:13vw;
+
+
+
+}
 }

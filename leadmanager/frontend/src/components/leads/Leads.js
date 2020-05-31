@@ -22,15 +22,16 @@ export class Leads extends Component {
 
     render() {
         return (
+       <div className="card-group72">
+        <div className="container-fluid">
             <Fragment>
-                <h2>Leads</h2>
+                <h5>Los mercados locales, Se lo traemos a usted (delivery), con conductores de confianza!</h5>
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Message</th>
+                            <th>Order</th>
                             <th />
                         </tr>
                     </thead>
@@ -39,7 +40,6 @@ export class Leads extends Component {
                             <tr key={lead.id}>
                                 <td>{lead.id}</td>
                                 <td>{lead.name}</td>
-                                <td>{lead.email}</td>
                                 <td>{lead.message}</td>
                                 <td>
                                     <button
@@ -55,6 +55,9 @@ export class Leads extends Component {
                     </tbody>
                 </table>
             </Fragment>
+         </div>
+  </div>
+
         );
     }
 }

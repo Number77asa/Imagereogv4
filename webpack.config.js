@@ -2,7 +2,18 @@ var webpack = require('webpack');
 
 
 module.exports = {
-    module: {
+  mode: "production",
+
+  // Enable sourcemaps for debugging webpack's output.
+   devtool: "source-map",
+
+   resolve: {
+       // Add '.ts' and '.tsx' as resolvable extensions.
+       extensions: [".ts", ".tsx", ".js"]
+
+     },
+
+  module: {
 
         rules: [
             {
@@ -42,4 +53,5 @@ module.exports = {
             jquery: "jquery/src/jquery"
         }
     }
-}
+
+};

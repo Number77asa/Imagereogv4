@@ -10,13 +10,26 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from '../../actions/auth';
+import './Login.css';
 
+/*
+FB.getLoginStatus(function (response) {
+    statusChangeCallback(response);
+});
+
+
+function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+}*/
 export class Login extends Component {
     //putting in component level state (has nothing to do with redux)
     state = {
         username: "",
         password: ""
     }
+
 
     static propTypes = {
         login: PropTypes.func.isRequired,
@@ -38,42 +51,63 @@ export class Login extends Component {
         }
         const { username, password } = this.state;
         return (
-            <div className="col-md-6 m-auto">
-                <div className="card card-body mt-5">
-                    <h2 className="text-center">Login</h2>
-                    <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
-                            <label>Username</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                name="username"
-                                onChange={this.onChange}
-                                value={username}
-                            />
-                        </div>
 
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                name="password"
-                                onChange={this.onChange}
-                                value={password}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <button type="submit" className="btn btn-primary">
-                                Login
-                        </button>
-                        </div>
-                        <p>
-                            Don't have an account? <Link to="/register">Register</Link>
-                        </p>
-                    </form>
+            <div className="card-group6">
+                <h3 className="text-center">Envios de: Resturantes, Mercados, Alcohol, y  Carga Pesada</h3>
+                <h4 className="text-center">Lunes - Domingo 7am-7pm</h4>
+                <div className="col-sm-6 m-auto">
+                    <div className="card card-body mt-5">
+                        <h2 className="text-center">Login</h2>
+                        <form onSubmit={this.onSubmit}>
+                            <div className="form-group">
+                                <label>Username</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="username"
+                                    onChange={this.onChange}
+                                    value={username}
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label>Password</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    name="password"
+                                    onChange={this.onChange}
+                                    value={password}
+                                />
+                            </div>
+
+                            <div className="form-group">
+
+                            </div>
+                            <div className="form-group">
+                                <button type="submit" className="btn btn-primary">
+                                    Login
+                                </button>
+                            </div>
+
+                            <p>
+                                No tiene una cuenta? <Link to="/register">Register</Link>
+                            </p>
+                          
+
+                        </form>
+                    </div>
                 </div>
+
+                <div>
+                    <video loop autoPlay muted webkit-playsinline="true" playsinline="true" className="video-fluid z-depth-1"
+                        src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" webkit-playsinline="true" playsinline="true"></video>
+                </div>
+
+               
             </div>
+
+
 
         )
     }
@@ -93,4 +127,5 @@ const mapStateToProps = state => ({
 });
 
 //were passing in login action {login}
-export default connect(mapStateToProps, { login })(Login);
+export default connect(mapStateToProps, {login })(Login);
+
